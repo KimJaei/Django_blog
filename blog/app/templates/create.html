@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<style>
+    a {
+        text-decoration:none;
+        color: black;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    h5 {
+        font-weight: bold;
+    }
+
+    input {
+        width: 69.5rem;
+        border: none;
+        height: 2.5rem;
+    }
+
+    textarea {
+        width: 69.5rem;
+        height: 40rem;
+        border:none;
+    }
+</style>
+</head>
+<body>
+<a href="{%url 'index'%}"><h3>Blog</h3></a>
+<div class="container">
+    <div class="row">
+        <form action="{% url 'new' %}" method="GET">
+        <select style="width:12rem; height:2rem; margin-bottom:3rem;" name = "category" >
+            <option value="Django">Django</option>
+            <option value="Python">Python</option>
+            <option value="html/css">html/css</option>
+            <option value="Js/Jquery">Js/Jquery</option>
+        </select><br>
+    </div>
+    <div class="row">
+        
+        <input type="text" name="title">
+        <hr>
+        <textarea name="body"></textarea><br>
+    </div>
+</div>
+</body>
+<footer>
+    <div class="container-fluid">
+        <div style="position: fixed; left:0; bottom:0; height:4rem; width:100%; background-color:rgb(240, 240, 240); text-align:center;">
+            <input type="submit" style="width: 5rem; margin-top:0.8rem;"class="btn btn-dark rounded-pill" value="완료">
+            </div>
+        </form>
+    </div>
+</footer>
+
+
+    
