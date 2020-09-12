@@ -44,15 +44,16 @@
 <a href="{%url 'index'%}"><h3>Blog</h3></a>
 <div class="container">
     <div class="row">
-        <select name = "category" style="width:12rem; height:2rem; margin-bottom:3rem;">
-            <option value="Django">Django</option>
-            <option value="Python">Python</option>
-            <option value="html/css">html/css</option>
-            <option value="Js/Jquery">Js/Jquery</option>
-        </select><br>
+        <form action="/updat/{{blog.id}}" method="GET">
+            <select name = "category" style="width:12rem; height:2rem; margin-bottom:3rem;">
+                <option value="Django">Django</option>
+                <option value="Python">Python</option>
+                <option value="html/css">html/css</option>
+                <option value="Js/Jquery">Js/Jquery</option>
+            </select><br>
     </div>
     <div class="row">
-        <form action="/updat/{{blog.id}}" method="GET">
+        
         <input type="text" name="title" value="{{blog.title}}">
         <hr>
         <textarea name="body">{{blog.body}}</textarea><br>
@@ -64,7 +65,7 @@
         <div style="position: fixed; left:0; bottom:0; height:4rem; width:100%; background-color:rgb(240, 240, 240); text-align:center;">
             <input type="submit" style="width: 5rem; margin-top:0.8rem;"class="btn btn-dark rounded-pill" value="완료">
             </div>
-            </form>
+        </form>
     </div>
 </footer>
 
